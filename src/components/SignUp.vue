@@ -3,12 +3,12 @@
       <h3>Sign Up</h3>
       <form @submit.prevent="signUp">
         <div class="mb-3">
-          <label for="email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" v-model="email" required>
+          <label for="signUpEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="signUpEmail" v-model="email" required>
         </div>
         <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" v-model="password" required>
+          <label for="signUpPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="signUpPassword" v-model="password" required>
         </div>
         <div class="mb-3">
           <label for="confirmPassword" class="form-label">Confirm Password</label>

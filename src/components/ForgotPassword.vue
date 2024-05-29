@@ -30,7 +30,7 @@
   
           if (response.status === 200) {
             alert('A password reset link has been sent to your email.');
-            this.$router.push({ name: 'SignIn' });
+            this.$router.push({ name: 'SignInSignUp' });
           } else {
             alert('Failed to send password reset link. Please check your email.');
           }

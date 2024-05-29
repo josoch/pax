@@ -16,16 +16,15 @@
         <SignUp />
       </div>
     </div>
-    <router-view></router-view> <!-- Ensure this is included for routing -->
   </div>
 </template>
 
 <script>
-import SignIn from './components/SignInSignUp.vue';
-import SignUp from './components/SignUp.vue';
+import SignIn from './SignIn.vue';
+import SignUp from './SignUp.vue';
 
 export default {
-  name: 'App',
+  name: 'SignInSignUp',
   components: {
     SignIn,
     SignUp

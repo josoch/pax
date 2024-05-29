@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import App from '../App.vue';
 import ForgotPassword from '../components/ForgotPassword.vue';
+import SignInSignUp from '../components/SignInSignUp.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'App',
-    component: App
+    name: 'SignInSignUp',
+    component: SignInSignUp
   },
   {
     path: '/home',
@@ -24,15 +24,6 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
-});
-
-router.beforeEach((to, from, next) => {
-  const isLoggedIn = !!localStorage.getItem('user');
-  if (isLoggedIn && to.name === 'App') {
-    next({ name: 'HomeView' });
-  } else {
-    next();
-  }
 });
 
 export default router;
