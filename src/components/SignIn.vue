@@ -35,7 +35,7 @@ export default {
   methods: {
     async signIn() {
       try {
-        const response = await axios.post('https://familyapp.ocholi.com/users', {
+        const response = await axios.post('https://familyapp.ocholi.com/user', {
           email: this.email,
           password: this.password
         });
