@@ -13,6 +13,7 @@
 
 <script>
 import axios from 'axios';
+import { useRouter } from 'vue-router';
 
 export default {
   name: 'ForgotPassword',
@@ -21,16 +22,20 @@ export default {
       resetEmail: ''
     };
   },
+  setup() {
+    const router = useRouter();
+    return { router };
+  },
   methods: {
     async resetPassword() {
       try {
-        const response = await axios.post('https://familyapp.ocholi.com/users/reset-password', {
+        const response = await axios.post('https://familyapp.ocholi.com/users', {
           email: this.resetEmail
         });
 
         if (response.status === 200) {
           alert('A password reset link has been sent to your email.');
-          this.$router.push({ name: 'SignInSignUp' });
+          this.router.push({ name: 'SignInSignUp' }); // Redirect to Sign In page
         } else {
           alert('Failed to send password reset link. Please check your email.');
         }
