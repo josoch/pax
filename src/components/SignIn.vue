@@ -35,19 +35,21 @@ export default {
   methods: {
     async signIn() {
       try {
-        const response = await axios.post('https://familyapp.ocholi.com/user', {
+        const response = await axios.post('https://familyapp.ocholi.com/users/signin', {
           email: this.email,
           password: this.password
         });
 
         if (response.status === 200) {
+          console.log('Sign In successful', response.data);
           localStorage.setItem('user', JSON.stringify(response.data));
           this.router.push({ name: 'HomeView' });
         } else {
+          console.error('Sign In failed', response);
           alert('Sign In failed. Please check your credentials.');
         }
       } catch (error) {
-        console.error('Sign In failed', error);
+        console.error('An error occurred during sign in', error);
         alert('An error occurred during sign in. Please try again.');
       }
     },
@@ -57,9 +59,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-.card {
-  padding:25px;
-  border: none;
-}
-</style>
