@@ -57,3 +57,9 @@ export default {
   }
 };
 </script>
+<style scoped>
+.card {
+  padding:25px;
+  border: none;
+}
+</style>
