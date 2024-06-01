@@ -2,7 +2,7 @@
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" to="/">
             <img src="./assets/logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-centre">
             FamilyApp
           </a>
